@@ -1,226 +1,90 @@
+/* RESET DASAR */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* HALAMAN UTAMA */
 body {
-  background: #f5f5f7;
-  color: #222;
-  display: flex;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #5A002A, #A3004C);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* SIDEBAR */
-
-.sidebar {
-  width: 250px;
-  background: #5c0b32;
-  color: white;
-  padding: 25px 15px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-
-.logo-icon {
-  width: 50px;
-  height: 50px;
-  background: #ffffff;
-  color: #a3004c;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.logo h2 {
-  font-size: 20px;
-}
-
-.logo span {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu {
-  color: white;
-  text-decoration: none;
-  padding: 14px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.menu:hover,
-.menu.active {
-  background: #a3004c;
-}
-
-/* MAIN */
-
-main {
-  flex: 1;
-  padding: 30px;
-}
-
-/* HEADER */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-header h1 {
-  font-size: 30px;
-}
-
-header p {
-  color: #777;
-  margin-top: 5px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatar {
-  width: 45px;
-  height: 45px;
-  background: #a3004c;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* DASHBOARD CARDS */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.card {
-  background: white;
-  padding: 22px;
-  border-radius: 15px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background: #f3d6e5;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-}
-
-.card p {
-  color: #777;
-  font-size: 14px;
-}
-
-.card h2 {
-  margin-top: 5px;
-  color: #a3004c;
-}
-
-/* CONTENT */
-
-.content {
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.content-header p {
-  color: #777;
-  margin-top: 5px;
-}
-
-.btn-primary {
-  background: #a3004c;
-  color: white;
-  border: none;
-  padding: 13px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-}
-
-.welcome-box {
-  margin-top: 30px;
-  padding: 25px;
-  background: #f9edf3;
-  border-left: 5px solid #a3004c;
-  border-radius: 10px;
-}
-
-.welcome-box p {
-  margin-top: 10px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* RESPONSIVE HP */
-
-@media (max-width: 768px) {
-
-  body {
-    display: block;
-  }
-
-  .sidebar {
+/* CONTAINER LOGIN */
+.login-container {
     width: 100%;
-  }
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
+/* KOTAK LOGIN */
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
+/* LOGO */
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 
-  .content-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
+/* JUDUL */
+.login-box h1 {
+    color: #A3004C;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
 
+/* SUB JUDUL */
+.login-box p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* SAAT INPUT DIPILIH */
+.login-box input:focus {
+    border-color: #A3004C;
+}
+
+/* TOMBOL LOGIN */
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    background: #A3004C;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SAAT TOMBOL DITEKAN */
+.login-box button:hover {
+    background: #7A0038;
 }
