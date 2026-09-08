@@ -1,43 +1,26 @@
-// CICIJASTIP MANAGEMENT
-// File JavaScript untuk fungsi dashboard
+function login() {
 
-console.log("Cicijastip Management berhasil dijalankan!");
+    // Ambil username
+    const username = document.getElementById("username").value;
 
-// DATA SEMENTARA
-let totalPenjualan = 0;
-let totalKeuntungan = 0;
-let totalCustomer = 0;
-let totalTrip = 0;
+    // Ambil password
+    const password = document.getElementById("password").value;
 
 
-// FUNGSI FORMAT RUPIAH
-
-function formatRupiah(angka) {
-
-  return "Rp " + angka.toLocaleString("id-ID");
-
-}
+    // Username dan password sementara
+    const adminUsername = "admin";
+    const adminPassword = "123456";
 
 
-// TAMPILKAN DATA DASHBOARD
+    // Cek login
+    if (username === adminUsername && password === adminPassword) {
 
-function updateDashboard() {
+        alert("Login Berhasil! Selamat datang di Cicijastip Management 👋");
 
-  document.getElementById("totalPenjualan").innerText =
-    formatRupiah(totalPenjualan);
+    } else {
 
-  document.getElementById("totalKeuntungan").innerText =
-    formatRupiah(totalKeuntungan);
+        alert("Username atau Password salah!");
 
-  document.getElementById("totalCustomer").innerText =
-    totalCustomer;
-
-  document.getElementById("totalTrip").innerText =
-    totalTrip;
+    }
 
 }
-
-
-// JALANKAN DASHBOARD
-
-updateDashboard();
